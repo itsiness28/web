@@ -1,0 +1,58 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+img {
+ width: 100%;
+ height: auto;
+ vertical-align: middle;
+}
+
+.wrapper{
+    /* Ancho máximo, si la pantalla es más pequeña, puede disminuir, Evitando el desbordamiento, así no hay que scrollear. */
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 40px; 
+}
+
+nav{
+    background-color: aquamarine;
+    display: flex;
+    padding: 24px 0;
+    justify-content: space-between;
+}
+
+nav > ul{
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+header {
+    background-color: blue;
+    display: flex;
+}
+
+header > div:first-child {
+
+}
+
+header > div:last-child{
+    padding: 40px;
+    border: 1px blueviolet;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+header > div:last-child > img{
+    border-radius: 50€;
+    
+}
