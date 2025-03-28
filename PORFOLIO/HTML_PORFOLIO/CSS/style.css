@@ -3,9 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-
 }
-a{
+a {
     color: black;
     text-decoration: none;
 }
@@ -16,43 +15,139 @@ img {
  vertical-align: middle;
 }
 
-.wrapper{
+h1 {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 80px;
+}
+
+.wrapper {
     /* Ancho máximo, si la pantalla es más pequeña, puede disminuir, Evitando el desbordamiento, así no hay que scrollear. */
     max-width: 1200px; 
     margin: 0 auto;
     padding: 0 40px; 
 }
 
+/* NAVEGADOR */
 nav{
-    background-color: aquamarine;
+    /* background-color:deepskyblue; */
     display: flex;
     padding: 24px 0;
     justify-content: space-between;
 }
 
-nav > ul{
+nav > ul {
     list-style: none;
     display: flex;
     gap: 24px;
 }
 
+/* HEADER */
 header {
-    background-color: blue;
+    /* background-color: blue; */
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 200px;
+    padding: 80px 0;
+    
+}
+
+header > div {
+  flex: 1px;
+  width: 50%;
 }
 
 header > div:first-child {
 
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+
 }
 
-header > div:last-child{
+header > div:last-child {
     padding: 40px;
-    border: 1px blueviolet;
-    border-radius: 50px;
-    overflow: hidden;
+    border: 10px blueviolet;
+    border-radius: 50%;
+    height: fit-content;
+    min-width: 400px;
+    max-width: 624px;
+
 }
 
-header > div:last-child > img{
-    border-radius: 50€;
+/* IMAGEN */
+header > div:last-child > img {
+    border-radius: 50%;
     
+}
+/* BOTONES */
+.btn-group {
+    display: flex;
+}
+
+.btn-group > a{
+    padding: 8px 10 px;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn-group > a:first-child{
+    background-color: blue;
+    color:aliceblue;
+}
+
+.btn-group > a:last-child{
+    border: 1px black;
+}
+
+/* FLEX PAGE */
+.flex-cont-parent {
+    padding: 80px; 
+    background-color: coral;
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-cont-parent > div {
+    background-color: rgba(0, 0, 255, 0.267);
+    border: 2px blue solid;
+    padding: 20px;
+    width: 280px;
+}
+
+.flex-cont-parent > div:nth-child(2) {
+    order: 1; 
+}
+
+.flex-cont-second {
+    background-color: cadetblue;
+    height: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.flex-cont-second > div {
+    width: 120px;
+    height: 120px;
+    background-color: deeppink;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+/* projects */
+#projects{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#projects {
+    display: flex; 
+    gap: 40px;
 }
