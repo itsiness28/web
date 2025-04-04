@@ -215,12 +215,16 @@ header > div:last-child > img {
     flex-direction: column;
 }
 
+footer {
+    margin: 80px;
+}
+
 
 /* #skills {
     margin: 80px;
 }
     #skills > .skills.row {
-    
+
 }
 */
 
