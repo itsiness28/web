@@ -190,6 +190,7 @@ header > div:last-child > img {
 }
 
 #skills  {
+    margin: 80px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -203,9 +204,24 @@ header > div:last-child > img {
     margin-bottom: 50px;
 }
 
-#skills  > .skills-row > .row{
+#skills  > .skills-row > .skills-col {
     display: flex;
-    flex-direction: row;
+    gap: 40px;
+    margin-bottom: 50px;
 }
+
+#skills  > .skills-row > .skills-col > div{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* #skills {
+    margin: 80px;
+}
+    #skills > .skills.row {
+    
+}
+*/
 
 
