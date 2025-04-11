@@ -28,7 +28,7 @@ h1 {
     padding: 0 40px; 
 }
 
-/* NAVEGADOR */
+/* NAVEGADOR - MENÚ */
 nav{
     /* background-color:deepskyblue; */
     display: flex;
@@ -40,6 +40,19 @@ nav > ul {
     list-style: none;
     display: flex;
     gap: 24px;
+}
+nav > ul >li > a {
+    font-weight: bold;
+    color: grey;
+    display: block;
+    transition: 0.6s;
+}
+
+nav > ul >li > a:hover {
+    color: blue;
+    /* font-size: 24px; */
+    transform: scale(1.5) 
+    /* rotate(5deg); */
 }
 
 /* HEADER */
@@ -85,23 +98,35 @@ header > div:last-child > img {
 /* BOTONES */
 .btn-group {
     display: flex;
+    gap: 24px; 
 }
 
 .btn-group > a{
     padding: 8px 10 px;
     font-weight: bold;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 22px;
+    transition: 0.3s;
 }
 
 .btn-group > a:first-child{
     background-color: blue;
     color:aliceblue;
 }
+.btn-group > a:first-child:hover{
+    background-color: rgb(0, 0, 148);
+    transition: 1s;
+}
 
 .btn-group > a:last-child{
     border: 1px black;
 }
+
+.btn-group > a:last-child:hover{
+    color: aliceblue;
+    background-color: black;
+}
+
 
 /* FLEX PAGE */
 .flex-cont-parent {
@@ -159,6 +184,7 @@ header > div:last-child > img {
     flex-wrap: wrap;
 }
 
+
 #projects > .pro-row > .col {
     display: flex;
     flex-direction: column;
@@ -169,6 +195,7 @@ header > div:last-child > img {
     width: 40%;
     flex: 1;
     min-width: 300px;
+
 }
 
 
@@ -180,6 +207,8 @@ header > div:last-child > img {
 
 #projects > .pro-row > .col > div {
     height: 300px;
+    position: relative; 
+    /* overflow: hidden; */
 }
 
 #projects > .pro-row > .col > div > img {
@@ -187,8 +216,38 @@ header > div:last-child > img {
     height: 300px;
     object-fit: cover;
     border-radius: 20px;
+
 }
 
+/* Está posicionado de forma absoluta, será relativo al elemento contenedor que 
+tenga la posicion relative  */
+#projects > .pro-row > .col > div >.overlay{
+    background-color: rgba(0, 0, 255, 0.493);
+    position: absolute;
+    left: 0px;
+    top: 0px; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 24px;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+#projects > .pro-row > .col > div >.overlay:hover {
+    opacity:1; 
+}
+
+/* OVERLAY */
+
+
+
+
+/* SKILLS */
 #skills  {
     margin: 80px;
     display: flex;
@@ -216,9 +275,31 @@ header > div:last-child > img {
 }
 
 footer {
-    margin: 80px;
+    margin: 80px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
+footer > .f-row {
+    display: flex; 
+    justify-content: space-between;
+}
+
+footer > .f-row > .f-social {
+    padding: 24px 0;
+    display: flex;
+    gap: 24px;
+    font-size: 24px;
+}
+
+footer > .f-row > .btn-group {
+    align-items: flex-end;
+}
+
+footer > .f-row > .copyright {
+    text-align: right;
+}
 
 /* #skills {
     margin: 80px;
