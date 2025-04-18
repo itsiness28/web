@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+.wrapper{
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 40px; 
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 100px 24px;
+    justify-content: space-evenly;
+    padding: 24px; 
+}
