@@ -2,18 +2,99 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
 }
-.wrapper{
-    max-width: 1200px; 
-    margin: 0 auto;
-    padding: 0 40px; 
+p{
+    font-size: 40px;
+}
+
+.mainpage {
+    position: relative;
+    background-image:url('../sources/img/mainpageimg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    z-index: 1; 
+}
+
+.mainpage::before{
+    content: "";
+    position: absolute;   
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 2; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+} 
+
+nav{
+    position: fixed;
+    top:0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.378);
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
 }
 
 nav ul{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 100px 24px;
+    padding: 24px 24px;
     justify-content: space-evenly;
-    padding: 24px; 
+    list-style: none;
+    margin:0;
+    position: relative;
+    z-index: 11;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 24px 24px;
+    color:#F7F4F3;
+    transition: color 0.3s ease-in-out;
+    font-size: 24px;
+}
+
+nav ul li a:hover {
+    color: #66AABD;
+}
+
+/* LO DEJO AQUÍ, INTENTANDO QUE FUNCIONE EL HOVER CUANDO ESTA FIXED */
+nav.sticky ul li a:hover {
+    color: #052639;
+}
+
+nav.sticky{
+    background-color:#F7F4F3;
+
+}
+nav.sticky ul li a{
+    color: black;
+}
+.maintxt {
+    font-size: larger;
+    color:#F7F4F3;
+    position: relative;
+    z-index: 4;
+    padding: 250px;
+    text-align: right;
+}
+
+.maintxt > h1 {
+    font-size: 100px;
+    font-weight: 600;
+}
+
+.maintxt > h2 {
+    font-size: 60px;
+}
+
+.maintxt > h3 {
+    font-size: 35px;
 }
