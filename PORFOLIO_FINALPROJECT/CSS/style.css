@@ -67,7 +67,7 @@ nav ul li a:hover {
 
 /* LO DEJO AQUÍ, INTENTANDO QUE FUNCIONE EL HOVER CUANDO ESTA FIXED */
 nav.sticky ul li a:hover {
-    color: #052639;
+    color: #052639 !important;
 }
 
 nav.sticky{
