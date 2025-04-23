@@ -77,12 +77,14 @@ nav.sticky ul li a{
     width: 100%;
     height: 100vh;
     z-index: 1; 
+    overflow: hidden;
+    max-height: 1200px;
 }
 
 .mainpage::before{
     content: "";
     position: absolute;   
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.61);
     z-index: 2; 
     top: 0;
     left: 0;
@@ -97,7 +99,8 @@ nav.sticky ul li a{
     color:#F7F4F3;
     position: relative;
     z-index: 4;
-    padding: 250px;
+    padding-right: 15%;
+    padding-top: 20%;;
     text-align: right;
 }
 
@@ -114,6 +117,10 @@ nav.sticky ul li a{
     font-size: 35px;
 }
 
+.animated-welcome-container{
+    height: 200px;
+}
+
 .animated-welcome {
     font-size: 35px;
     white-space: nowrap;  
@@ -122,12 +129,14 @@ nav.sticky ul li a{
     padding-right: 5px;
     display: inline-block;
     text-wrap: wrap;
+    max-height: 100%;
   }
 
 /* Section Projects - Background */
 
-.projects {
-    background-color: #F7F4F3;
+#projects {
+    background-color:#F7F4F3;
+    max-height: 1300px;
 }
 
 
@@ -137,4 +146,5 @@ nav.sticky ul li a{
     font-size: 80px;
     font-weight: 600;
     padding-left: 120px;
+    padding-top: 40px;
 }

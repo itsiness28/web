@@ -5,9 +5,10 @@ window.addEventListener("scroll", function(){
 
 const sentences = [
     "Nice to meet you!",
-    "Welcome to my Porfolio",
-    "Spreadsheet enthusiast",
-    "Sure you can stand a little search, right...?"
+    "Welcome to my Porfolio!",
+    "Spreadsheet enthusiast.",
+    "Achiever.",
+    "Always trying to look deeper...",
 ];
 
 let currentSentenceIndex = Math.floor(Math.random() * sentences.length);
