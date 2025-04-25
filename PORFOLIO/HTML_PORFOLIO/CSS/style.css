@@ -301,6 +301,29 @@ footer > .f-row > .copyright {
     text-align: right;
 }
 
+#gallery > ul {
+    list-style: none;
+    display: flex;  
+    flex-wrap:wrap ;
+}
+
+#gallery > ul > li {
+    height: 25vh;
+    flex-grow: 1;
+}
+
+#gallery > ul > li {
+    height: 25vh;
+    flex-grow: 1;
+}
+
+#gallery > ul > li > img{
+    max-height: 200%;
+    min-width: 100%;
+    object-fit: cover;
+}
+    
+
 /* #skills {
     margin: 80px;
 }
@@ -309,4 +332,61 @@ footer > .f-row > .copyright {
 }
 */
 
+
+/* MEDIA QUERIES */
+/* Tamaño tablet o M */
+
+@media screen and (max-width: 824px){
+
+    h1{
+        line-height: normal;
+    
+    }
+
+    /* body {
+        /* background-color: aqua; */
+     */
+
+    header > div:last-child {
+        min-width: 100%;
+    }
+
+    #projects > .pro-row > .big-col, #projects > .pro-row > .small-col{
+        min-width: 100%;
+    }
+
+    footer > .f-row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper{
+        padding: 0 20px;
+    }
+
+
+
+}
+
+   
+    
+
+
+@media screen and (max-width: 480px) {
+    /* body{
+        /* background-color: blueviolet; */
+    /* };  */
+
+    h1{
+        font-size: 42px;
+    }
+
+    nav, nav > ul {
+        flex-direction: column;
+    }
+
+    .wrapper{
+        padding: 0 10px;
+    }
+}
 
