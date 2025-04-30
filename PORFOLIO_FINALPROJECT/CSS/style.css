@@ -6,6 +6,7 @@
     font-weight: 400;
     margin: 0;
     padding: 0;
+    line-height: 1.2;
 }
 p{
     font-size: 40px;
@@ -43,28 +44,33 @@ nav ul{
 nav ul li a{
     text-decoration: none;
     padding: 24px 24px;
-    color:#F7F4F3;
+    color: #F4F2EF;
     transition: color 0.3s ease-in-out;
     font-size: 24px;
 }
 
 
  nav ul li a:hover {
-    color: #66AABD;
+    color: #94B6EF;
 }
 
 body nav.sticky ul li a:hover {
-    color: #052639 !important;
-     text-decoration: underline;
+    color: #1300e1 !important;
 } 
 
 nav.sticky{
-    background-color:#F7F4F3;
+    background-color: #F4F2EF;
 
 }
 nav.sticky ul li a{
     color: black;
+    transition: 0.3s ease-in-out;
+    font-weight: 500
 }
+
+/* body nav.sticky ul li a{
+   transition: 0.3s ease-in-out;
+} */
 
  /* Background for Home */
 
@@ -96,7 +102,7 @@ nav.sticky ul li a{
 
 .maintxt {
     font-size: larger;
-    color:#F7F4F3;
+    color: #F4F2EF;
     position: relative;
     z-index: 4;
     padding-right: 15%;
@@ -125,7 +131,7 @@ nav.sticky ul li a{
     font-size: 35px;
     white-space: nowrap;  
     overflow: hidden;  
-    color:#66AABD;
+    color: #94B6EF;
     font-style: italic;
     border-right: 3px solid black; 
     padding-right: 5px;
@@ -136,8 +142,22 @@ nav.sticky ul li a{
 
 /* Section Projects - Background */
 
+#about {
+    background-color: #1300e1;
+    max-height: 1300px;
+    color: #F4F2EF;
+}
+
+about > about-container > about-text > h1 {
+    font-size: 80px;
+    font-weight: 600;
+    padding-left: 120px;
+    padding-top: 40px;
+}
+
+
 #projects {
-    background-color:#F7F4F3;
+    background-color: #F4F2EF;
     max-height: 1300px;
 }
 
