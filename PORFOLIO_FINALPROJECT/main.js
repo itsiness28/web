@@ -8,7 +8,7 @@ const sentences = [
     "Welcome to my Porfolio!",
     "Spreadsheet enthusiast.",
     "Achiever.",
-    "Always trying to look deeper...",
+    "Always trying to look deeper.",
 ];
 
 let currentSentenceIndex = Math.floor(Math.random() * sentences.length);

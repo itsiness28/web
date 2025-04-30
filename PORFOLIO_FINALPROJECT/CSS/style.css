@@ -148,7 +148,7 @@ nav.sticky ul li a{
     color: #F4F2EF;
 }
 
-about > about-container > about-text > h1 {
+#about > h1 {
     font-size: 80px;
     font-weight: 600;
     padding-left: 120px;
