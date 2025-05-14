@@ -58,5 +58,8 @@ function eraseText() {
     }
 }
 
+
+
+
 document.addEventListener("DOMContentLoaded", typeText);
 
