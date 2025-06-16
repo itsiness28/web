@@ -3,39 +3,69 @@
   <head>
     <title>Ines C. Gijon - Game Producer Porfolio</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width= devide-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="CSS/style.css" rel="stylesheet" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Tenor+Sans&display=swap"
       rel="stylesheet"
     />
+
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"  
+      />
   </head>
   <body>
     <div class="mainpage">
       <header>
-        <nav>
-          <ul>
+        <nav class="nav-desktop">
+          <a href="#home" class="nav-logo">
+            <img src="sources\img\logo.png" alt="Logo Inés C. Gijón" />
+          </a>
+          <ul class="menu-desktop">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li>
               <a href="#projects">Projects</a>
             </li>
             <li>
-              <a href="#">References</a>
+              <a href="#references">Recommendations</a>
             </li>
           </ul>
         </nav>
       </header>
-    
+
+      <!-- hamburguer menu -->
+       <input class="side-menu" type="checkbox" id="side-menu"/>
+       <label class="hamb" for="side-menu">
+         <i class="fa-solid fa-bars"></i>
+         <i class="fa-solid fa-times"></i>
+       </label>
+       <nav class="nav-mobile">
+        <ul class="menu-mobile">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#references">References</a>
+          </li>
+        </ul>
+      </nav>
 
       <section id="home">
         <div class="maintxt">
           <h2>I'm Inés C. Gijón</h2>
           <h1>Game Producer and Designer</h1>
+          <h4>Currently working as assistant producer @ LEVEL UP [Game Dev Hub]</h4>
           <div class="animated-welcome-container">
             <div class="animated-welcome">
               <h3></h3>
             </div>
+          </div>
+          <div  class="mobile-fill">
+             <h3>Contact me at <a href="https://www.linkedin.com/in/in%C3%A9s-c-gij%C3%B3n/" target="_blank" class="link-linkedin">LinkedIn</a></h3>
           </div>
         </div>
       </section>
@@ -57,7 +87,7 @@
     </section>
       <section id="projects">
         <div class="title-projects">
-          <h1>Projects and Experience.</h1>
+          <h1>Projects and Experience</h1>
         </div>
         <div class="projects-image-container">
           <a href="project1.html">
@@ -75,20 +105,51 @@
         </div>
 
       </section>
+      <section id="references">
+        <h1>Recommendations</h1>
+        <p class="reference-text"> "...Her positive attitude, punctuality, and willingness to take on new challenges have been highly valued by the entire team. We believe she possesses the necessary skills to succeed in the job market and have confidence in her potential to make a significant contribution to any organization where she chooses to develop professionally. Therefore, we highly recommend Inés Castaño for any professional or academic opportunity she wishes to pursue."</p>
+          <p class="reference-note">Translated from Spanish</p>
+          <p class="reference-author">Daniel Sánchez, CEO of Gammera Nest</p>
+      </section>
 
+      <section id="contact">
+        <h1>Want to get in contact?</h1>
+        <p>Check out my <a href="https://www.linkedin.com/in/in%C3%A9s-c-gij%C3%B3n/" target="_blank" class="link-linkedin">LinkedIn</a></p>
+        <p>Or send an email at</p>
+        <h3>inescasgi@outlook.com</h3>
+      </section>
+        
       <footer>
-        <div class="footer-row">
+         <div class=" f-social">
+            <a href="https://x.com/itsinesss28">
+              <i class="fa-brands fa-x-twitter"></i>
+           </a>
+            <a href="https://www.linkedin.com/in/in%C3%A9s-c-gij%C3%B3n/">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          <a href="https://github.com/itsiness28">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://discordapp.com/users/689441502522376229">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+          <a href="https://iesfortunyalumnaic.wixsite.com/crert">
+            <i class="fa-brands fa-wix"></i>
+          </a>
+        </div>
+
           <div class="footer-menu">
-            <nav>
+             <nav>
               <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#">References</a></li>
+                <li><a href="#references">Recommendations</a></li>
               </ul>
             </nav>
           </div>
-        </div>
+          <p>All rights reserved to Inés C. Gijón © </p>
+         
       </footer>
 
     <script src="main.js"></script>
