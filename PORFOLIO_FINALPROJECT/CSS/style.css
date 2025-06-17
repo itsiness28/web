@@ -19,8 +19,79 @@ html {
 
 .nav-mobile {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.685);
+  transition: max-height 0.4s ease;
+  z-index: 1000;
+  padding-top: 70px;
 }
 
+
+.hamb{
+    display: none;
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 25px;
+    color: #F4F2EF;
+    cursor: pointer;
+    z-index: 1500;
+    user-select: none;
+    background: transparent;
+    align-items: right;
+}
+
+.hamb .fa-bars {
+  display: none;
+}
+
+.hamb .fa-times {
+  display: none;
+}
+
+.side-menu:checked + .hamb .fa-bars {
+  display: none;
+}
+
+.side-menu:checked + .hamb .fa-times {
+  display: inline;
+}
+
+.side-menu:checked ~ .nav-mobile {
+  max-height: 500px; 
+}
+
+.menu-mobile {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;; 
+  padding-bottom: 30px;
+  margin: 0;
+}
+
+.menu-mobile li a {
+  color: white;
+  font-size: 20px;
+  padding-left: 30px;;
+  text-decoration: none;
+  transition: color 0.3s ease;
+} 
+
+.menu-mobile li a:hover {
+  color: #94B6EF;
+}
+
+.side-menu {
+  display: none;
+} 
 .nav-desktop {
     position: fixed;
     top:0;
@@ -83,14 +154,11 @@ body .nav-desktop.sticky ul li a:hover {
 }
 
 .nav-desktop > .nav-logo > img {
-  height: 70px; /* Ajusta el tamaño según necesites */
+  height: 70px; 
   width: auto;
   padding-top: 7px;;
 }
 
-/* body nav.sticky ul li a{
-   transition: 0.3s ease-in-out;
-} */
 
  /* Background for Home */
 
@@ -177,7 +245,7 @@ body .nav-desktop.sticky ul li a:hover {
 
 #about {
     background-color: #1300e1;
-    max-height: 1300px;
+    max-height: 1400px;
     color: #F4F2EF;
 }
 
@@ -199,7 +267,7 @@ body .nav-desktop.sticky ul li a:hover {
 
 #about > .about-container >.about-text > p {
     font-size: 25px;
-    padding: 60px;
+    padding: 40px;
 }
 
 .about-image img{
@@ -210,7 +278,20 @@ body .nav-desktop.sticky ul li a:hover {
     border-radius: 50%;
     margin-right: 60px;
 }
+
+.about-text > h3{
+    color: #F4F2EF;
+    padding: 30px;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 15px;
+}
    
+.about-text > h3 > a {
+    color: #F4F2EF;
+    transition: color 0.3s ease-in-out;
+}
+
 /* Section Projects */
 #projects {
     background-color: #F4F2EF;
@@ -248,17 +329,9 @@ body .nav-desktop.sticky ul li a:hover {
     object-position: center;
 }
 
-.projects-image-container > img > overlay{
-    background-color: #1300e1;
-    position: absolute;
-    left:0px;
-    top:0px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.projects-image-container > a > img:hover {
+    opacity: 0.75; 
+    transition: opacity 0.2s ease; 
 }
 
 .projects-image-container > img > overlay:hover{
@@ -301,7 +374,7 @@ body .nav-desktop.sticky ul li a:hover {
     margin-left: 61vw;
 }
 
-/* Carousel Images */
+/* CONTACT SECT */
 
 #contact {
     max-height: 1300px;
@@ -377,7 +450,22 @@ footer {
 }
 
 
+
 /* Project INDIVIDUAL PAGES */
+
+.projects-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.go-back-text {
+    font-size: 30px;
+    color: black;
+    padding-right: 50px;
+    padding-top: 40px;
+}
 .project1 {
     background-color: #F4F2EF;
     max-width: 100%;
@@ -402,26 +490,69 @@ footer {
     max-height: 1300px;
 
 }
+
+.project4-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5vmin;
+    padding: 30px;
+    overflow: hidden;
+}
+
+
 .title {
     font-size: 60px;
     font-weight: 600;
     padding-left: 70px;
-    padding-top: 40px;
+    padding-top: 10px;
     text-align: justify;
 }
 
 .project-text > p{
     max-width: 50vw;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 40px;
     margin-top: 10px;
     text-align: justify;
 }
 
+
+.project4-text > p{
+    max-width: 75vw;
+    font-size: 20px;
+    line-height: 40px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+
 .project-images {
-    max-width: 30vw;
+    max-width: 15vw;
     justify-content: center;
     align-items: center;
+}
+
+.project4-images {
+    max-width: 700px;
+    width:100%;
+    height: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project3-images > img{
+    max-width: 700px;
+    width:100%;
+    height: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .project-container {
     display: flex;
@@ -430,11 +561,38 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 5vmin;
-    padding: 60px;
+    padding: 30px;
     overflow: hidden;
 }
 
+.projects-logo > img {
+  height: 90px; 
+  width: auto;
+  padding-top: 7px;
+  padding-left: 10px;
+}
 
+.links-to-project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.links-to-project >p {
+    font-size: 30px;
+    color: #1300e1;
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+.links-to-project > a {
+    text-decoration: none;
+    color: #1300e1;
+    font-size: 50px;
+}
 
 
 
@@ -466,11 +624,19 @@ footer {
     }
 
     .hamb{
-        display: block;
+        display: block ;
+
     }
 
-    .nav-mobile{
-        display: block;
+    .nav-mobile {
+    display: block;
+    }
+
+    .menu-mobile {
+    display: block;
+    }
+    .hamb .fa-bars {
+    display: inline;
     }
 
 
@@ -481,12 +647,12 @@ footer {
     position: relative;
     z-index: 4;
     padding-right: 7%;
-    padding-top: 40%;
+    padding-top: 70%;
     text-align: right;
     }
     
     .mainpage{
-        max-height: 768px;
+        max-height: 844px;
     }
 
     .maintxt > h1 {
@@ -556,6 +722,11 @@ footer {
         display: none;
     }
 
+    .about-text > h3{
+    font-size: 20px;
+    text-align: center;
+    }
+
 
     /* PROJECTS */
     #projects {
@@ -600,7 +771,7 @@ footer {
     margin-left: 0;
     padding-left: 10px;
     padding-right: 10px;
-    text-align: right; /* O 'left' si prefieres */
+    text-align: right; 
     font-size: 14px;
     word-break: break-word;
     }
@@ -673,7 +844,132 @@ footer {
     }
 
 
+    /* Project INDIVIDUAL PAGES */
+
+.projects-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.projects-logo > img {
+  height: 70px; 
+  width: auto;
+  padding-top: 7px;
+  padding-left: 10px;
+}
+
+
+.go-back-text {
+    font-size: 20px;
+    color: black;
+    padding-right: 15px;
+}
+.project1 {
+    background-color: #F4F2EF;
+    max-width: 100%;
+    max-height: 900px;
+
+}
+.project2 {
+    background-color: #F4F2EF;
+    max-width: 100%;
+    max-height: 900px;
+
+}
+.project3 {
+    background-color: #F4F2EF;
+    max-width: 100%;
+    max-height: 900px;
+
+}
+.project4 {
+    background-color: #F4F2EF;
+    max-width: 100%;
+    max-height: 900px;
+
+}
+.title {
+    font-size: 40px;
+    font-weight: 600;
+    padding-left: 40px;
+    padding-top: 10px;
+    text-align: left;
+
+}
+
+.project-text > p{
+    max-width: 75vw;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.project-images {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-images > img {
+    max-width: 75vw;
+    height: auto;
+}
+.project-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5vmin;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.project4-images {
+    display: none;
+}
+
+
+}
+
+ @media (min-width: 768px) and (max-width: 1024px) {
+
+    .maintxt {
+    padding-right: 7%;
+    padding-top: 40%;
+    }
+
+    .mainpage{
+        max-height: 720px;
+    }
+    
+    .projects-image-container > a>  img{
+    width: 38vmin;
+    height: 50vmin;
+    object-fit: cover;
+    object-position: center;
+    padding: 30px;
+    }
+
+    #references > h1 {
+    font-size: 25px;
+    font-weight: 600;
+    }
+
+    #references > .reference-note,
+    #references > .reference-author {
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center; 
+    font-size: 12px;
+    word-break: break-word;
+    }
+
+
+} 
 
 
 
